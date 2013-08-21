@@ -83,9 +83,9 @@ if ( ! function_exists('docUpload'))
         {
     		$data = array('upload_data' => $CI->upload->data());
 
-            $filename = $data['upload_data']['file_name'];
+            	$filename = $data['upload_data']['file_name'];
 
-			return $filename;
+		return $filename;
     	}
     }
 }
