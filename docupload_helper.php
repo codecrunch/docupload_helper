@@ -4,14 +4,14 @@ if ( ! function_exists('docUpload'))
 {
     function docUpload($path, $id, $doctype = 'doc', $current = FALSE, $file = FALSE)
     {
-    	$CI =& get_instance();
+        $CI =& get_instance();
 
         /* if directory does not exist then create. */
     	if (ENVIRONMENT == 'production')
         {
 
             if (!is_dir($path.'/'.$id))
-        	{
+            {
                 $ftpstream = ftp_connect('ftp-address-here');
                 $login = ftp_login($ftpstream, 'ftp-username-here', 'ftp-password-here');
 
@@ -82,10 +82,8 @@ if ( ! function_exists('docUpload'))
     	if ($no_errors)
         {
     		$data = array('upload_data' => $CI->upload->data());
-
-            	$filename = $data['upload_data']['file_name'];
-
-		return $filename;
+            $filename = $data['upload_data']['file_name'];
+		    return $filename;
     	}
     }
 }
