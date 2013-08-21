@@ -1,6 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-/* is logged in user super admin? */
 if ( ! function_exists('docUpload'))
 {
     function docUpload($path, $id, $doctype = 'doc', $current = FALSE, $file = FALSE)
